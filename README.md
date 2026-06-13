@@ -70,7 +70,7 @@ Também é possível acessar o projeto pela página publicada no GitHub Pages.
 Coloque aqui o link do site publicado:
 
 ```text
-COLE_AQUI_O_LINK_DO_GITHUB_PAGES
+https://steyer-08.github.io/Projeto-Agrinho-2026/
 ```
 ## 🖼️ Créditos das imagens
 
