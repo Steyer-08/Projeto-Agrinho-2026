@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Verde - Plantio e Reciclagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul id="menu">
+                <li><a onclick="scrollToSection('plantacao')">Plantação em Casa</a></li>
+                <li><a onclick="scrollToSection('materiais')">Materiais Recicláveis</a></li>
+            </ul>
+        </nav>
+        <div class="logo">🌱 Guia Verde<span>Produção e meio ambiente</span></div>
+    </header>
+
+    <main class="container">
+        <!-- Seção Plantação -->
+        <section id="plantacao">
+            <h1>🌿 Como fazer sua própria plantação em casa</h1>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">
+                Cultivar alimentos em casa é mais fácil do que parece. Escolha abaixo o alimento que deseja plantar e veja o passo a passo completo, incluindo como propagar usando a própria planta e como reutilizar resíduos domésticos.
+            </p>
+
+            <h2 style="margin-bottom: 1.5rem;">Escolha o que plantar</h2>
+            
+            <div class="alimentos-carrossel-container">
+                <button class="carrossel-btn prev" onclick="scrollCarrossel('carrossel-alimentos', -200)" aria-label="Anterior">❮</button>
+                <div class="alimentos-grid" id="carrossel-alimentos">
+                    <div class="alimento-card" data-alimento="batata" onclick="selecionarAlimento('batata')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Batata</div>
+                    </div>
+                    <div class="alimento-card" data-alimento="salsa" onclick="selecionarAlimento('salsa')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Salsa</div>
+                    </div>
+                    <div class="alimento-card" data-alimento="alho" onclick="selecionarAlimento('alho')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Alho</div>
+                    </div>
+                    <div class="alimento-card" data-alimento="tomate" onclick="selecionarAlimento('tomate')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Tomate</div>
+                    </div>
+                    <div class="alimento-card" data-alimento="alface" onclick="selecionarAlimento('alface')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Alface</div>
+                    </div>
+                    <div class="alimento-card" data-alimento="tomate_cereja" onclick="selecionarAlimento('tomate_cereja')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Tomate-cereja</div>
+                    </div>
+                    <div class="alimento-card" data-alimento="cebolinha" onclick="selecionarAlimento('cebolinha')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Cebolinha</div>
+                    </div>
+                    <div class="alimento-card" data-alimento="cenoura" onclick="selecionarAlimento('cenoura')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Cenoura</div>
+                    </div>
+                </div>
+                <button class="carrossel-btn next" onclick="scrollCarrossel('carrossel-alimentos', 200)" aria-label="Próximo">❯</button>
+            </div>
+
+            <div id="guia-plantio">
+                <h3 id="nome-alimento"></h3>
+                <div id="conteudo-guia"></div>
+            </div>
+
+            <div id="dica-geral" class="dica">
+                <strong>💡 Dica:</strong> Clique em um dos alimentos acima para ver as instruções específicas de plantio, incluindo como propagar novas mudas e reutilizar resíduos domésticos.
+            </div>
+        </section>
+
+        <!-- Seção Materiais Recicláveis -->
+        <section id="materiais">
+            <h2>📦 Guia completo de materiais recicláveis</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">
+                Conheça os principais materiais recicláveis, como prepará-los corretamente para o descarte e ideias criativas para reutilizá-los em casa e na sua horta.
+            </p>
+
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.5rem; color: #e65100;">Escolha um material para ver o guia</h2>
+            
+            <div class="materiais-carrossel-container">
+                <button class="carrossel-btn material-btn prev" onclick="scrollCarrossel('carrossel-materiais', -200)" aria-label="Anterior">❮</button>
+                <div class="materiais-grid" id="carrossel-materiais">
+                    <div class="material-card" data-material="garrafa_pet" onclick="selecionarMaterial('garrafa_pet')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Garrafa PET</div>
+                    </div>
+                    <div class="material-card" data-material="vidro" onclick="selecionarMaterial('vidro')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Vidro</div>
+                    </div>
+                    <div class="material-card" data-material="papelao" onclick="selecionarMaterial('papelao')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Papelão</div>
+                    </div>
+                    <div class="material-card" data-material="lata" onclick="selecionarMaterial('lata')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Latas</div>
+                    </div>
+                    <div class="material-card" data-material="jornal" onclick="selecionarMaterial('jornal')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Jornal</div>
+                    </div>
+                    <div class="material-card" data-material="casca_ovo" onclick="selecionarMaterial('casca_ovo')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Cascas de Ovo</div>
+                    </div>
+                    <div class="material-card" data-material="borra_cafe" onclick="selecionarMaterial('borra_cafe')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Borra de Café</div>
+                    </div>
+                    <div class="material-card" data-material="tetra_pak" onclick="selecionarMaterial('tetra_pak')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Tetra Pak</div>
+                    </div>
+                    <div class="material-card" data-material="pneu" onclick="selecionarMaterial('pneu')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Pneus</div>
+                    </div>
+                    <div class="material-card" data-material="eletronicos" onclick="selecionarMaterial('eletronicos')">
+                        <div class="card-imagem">🖼️ Imagem</div>
+                        <div class="card-nome">Eletrônicos</div>
+                    </div>
+                </div>
+                <button class="carrossel-btn material-btn next" onclick="scrollCarrossel('carrossel-materiais', 200)" aria-label="Próximo">❯</button>
+            </div>
+
+            <div id="guia-material">
+                <h3 id="nome-material"></h3>
+                <div id="conteudo-material"></div>
+            </div>
+
+            <div id="dica-geral-materiais" class="dica">
+                <strong>💡 Dica:</strong> Clique em um dos materiais acima para ver como descartá-lo corretamente e ideias criativas de reutilização.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🌍 Feito com consciência ecológica | Hospedado no <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Site criado por Guilherme Steyer © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
