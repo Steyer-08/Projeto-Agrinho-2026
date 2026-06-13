@@ -482,3 +482,23 @@
     object-fit: cover;
     display: block;
 }
+.tema-agrinho {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #e8f5e9;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.tema-agrinho h1 {
+    color: #1b5e20;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.tema-agrinho-texto {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #333;
+}
