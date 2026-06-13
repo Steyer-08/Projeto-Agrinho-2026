@@ -1,4 +1,4 @@
-# 🌱 Guia Verde - Plantio e Reciclagem
+# 🌱 Guia Verde 
 
 ## 📌 Objetivo do projeto
 
